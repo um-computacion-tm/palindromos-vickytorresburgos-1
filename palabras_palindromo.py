@@ -2,11 +2,11 @@ import unittest
 
 def obtener_cantidad_de_palabras_palindrome(palabras):
     resultado = 0
-    for palabra in palabras:
-        palabra = palabra.replace(" ","")
-        if palabra == palabra[::-1]:
-            resultado += 1
-    return resultado
+    for palabra in palabras: #por cada palabra en la lista palabras
+        palabra = palabra.replace(" ", "").replace(",", "").replace("-", "").lower() #elimina espacios, comas y guiones del string de cada palabra
+        if palabra == palabra[::-1]:  #si la palabra sin espacios, comas ni guiones es igual a la palabra leida al reves
+            resultado += 1  #se le suma uno al contador de palindromos
+    return resultado  #devuelve cuantos palindromos hay en la lista
 
 
 class TestCantidadDePalabrasPalindromes(unittest.TestCase):
@@ -50,9 +50,24 @@ class TestCantidadDePalabrasPalindromes(unittest.TestCase):
             "neu  quen",
             "agita falsos usos la fatiga",
             "presidente de la camara de diputados: martin menem",
+			"A man, a plan, a canal - Panama"
         ]
         resultado = obtener_cantidad_de_palabras_palindrome(palabras)
-        self.assertEqual(resultado, 5)
+        self.assertEqual(resultado, 6)
+
+    # def test_cantidad_de_palabras_palindromes_complejo_2(self):
+    #     palabras = [
+    #         "ala",
+    #         "neuquen",
+    #         "hola",
+    #         "programacion",
+    #         "palap",
+    #         "neu  quen",
+    #         "agita falsos usos la fatiga",
+    #         "presidente de la camara de diputados: martin menem",
+    #     ]
+    #     resultado = obtener_cantidad_de_palabras_palindrome(palabras)
+    #     self.assertEqual(resultado, 5)
 
 
 if __name__ == '__main__':
