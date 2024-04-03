@@ -35,4 +35,7 @@ Funcionalidad:
 Para correrlo:
 
 1. Clone
-2. run python3 is_prime.py
+
+2. run python3 is_palindrome.py
+
+3. run python3 obtener_cantidad_de_palabras_palindrome.py
