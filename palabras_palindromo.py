@@ -6,7 +6,7 @@ def obtener_cantidad_de_palabras_palindrome(palabras):
         palabra = palabra.replace(" ", "").replace(",", "").replace("-", "").lower() #elimina espacios, comas y guiones del string de cada palabra
         if palabra == palabra[::-1]:  #si la palabra sin espacios, comas ni guiones es igual a la palabra leida al reves
             resultado += 1  #se le suma uno al contador de palindromos
-    return resultado  #devuelve cuantos palindromos hay en la list
+    return resultado  #devuelve cuantos palindromos hay en la lista
 
 
 class TestCantidadDePalabrasPalindromes(unittest.TestCase):
