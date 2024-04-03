@@ -36,6 +36,6 @@ Para correrlo:
 
 1. clonar
 
-2. run python3 is_palindrome.py
+2. correr python3 is_palindrome.py
 
-3. run python3 palabras_palindromo.py
+3. correr python3 palabras_palindromo.py
